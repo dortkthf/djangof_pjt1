@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        .lotto{
+            display: flex;
+            justify-content: center;
+        }
+        .ball1{
+            width: 7rem;
+            height: 7rem;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 7rem;
+            font-size: 3rem;
+            font-weight: bold;
+            border-radius: 50%;
+            margin: 0 1rem;
+            background-color: bisque;
+        }
+        .ball2{
+            width: 7rem;
+            height: 7rem;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 7rem;
+            font-size: 3rem;
+            font-weight: bold;
+            border-radius: 50%;
+            margin: 0 1rem;
+            background-color: orange;
+        }
+        .ball3{
+            width: 7rem;
+            height: 7rem;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 7rem;
+            font-size: 3rem;
+            font-weight: bold;
+            border-radius: 50%;
+            margin: 0 1rem;
+            background-color: greenyellow;
+        }
+        .ball4{
+            width: 7rem;
+            height: 7rem;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 7rem;
+            font-size: 3rem;
+            font-weight: bold;
+            border-radius: 50%;
+            margin: 0 1rem;
+            background-color: skyblue;
+        }
+        .ball5{
+            width: 7rem;
+            height: 7rem;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 7rem;
+            font-size: 3rem;
+            font-weight: bold;
+            border-radius: 50%;
+            margin: 0 1rem;
+            background-color: lightgray;
+        }
+        .plus {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 7rem;
+            height: 7rem;
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0 1rem;
+        }
+        div{
+            margin-bottom:3rem
+        }
+        .subtitle {
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>돌아온 행운의 파이썬 로또!</h1>
+        </div>
+        <div class="middle">
+            <p class="subtitle">행운의 여신은 누구의 손을 들어줄 것인가?</p>
+            {% for lot in lolist %}
+                <div class="lotto">
+                    {% for lo in lot %}
+                        {% if lo <= 10 %}
+                            <div class="ball1">{{ lo }}</div>
+                        {% elif lo <= 20 %}
+                            <div class="ball2">{{ lo }}</div>
+                        {% elif lo <= 30 %}
+                            <div class="ball3">{{ lo }}</div>
+                        {% elif lo <= 40 %}
+                            <div class="ball4">{{ lo }}</div>
+                        {% elif lo <= 50 %}
+                            <div class="ball5">{{ lo }}</div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

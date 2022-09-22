@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dinner</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+        .dinner {
+            font-weight: bold;
+            font-size: 3rem;
+        }
+        .strong{
+            color : orangered
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>오늘의 저녘은????</h1>
+            <p class="dinner"><span class="strong">{{ dinner }}</span> 입니다!</p>
+        </div>
+        <div class="middle">
+            <img src="{{ img }}" alt="">
+        </div>
+    </div>
+</body>
+</html>
